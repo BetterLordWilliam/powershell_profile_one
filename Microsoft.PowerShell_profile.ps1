@@ -1,8 +1,8 @@
-## Simple prompt: Show just the current directory
-function prompt {
-    $p = Split-Path -leaf -path (Get-Location)
-    "$p> "
-}
+# Simple prompt: Show just the current directory
+# function prompt {
+#     $p = Split-Path -leaf -path (Get-Location)
+#     "$p> "
+# }
 
 ## Use EPIC oh-my-posh
 oh-my-posh init pwsh | Invoke-Expression
