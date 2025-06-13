@@ -2,5 +2,7 @@
 Set-Alias ff fastfetch
 
 ## Use EPIC oh-my-posh
-oh-my-posh init pwsh | Invoke-Expression
+$POSH_CONFIG=($PSScriptRoot -replace "\\", "/")+"/poshconfigs/simpleexample.json"
+Write-Host $POSH_CONFIG
+oh-my-posh --config $POSH_CONFIG init pwsh | Invoke-Expression
 
