@@ -1,8 +1,11 @@
+## Useful profile script variables
+$PSScriptRootNix=($PSScriptRoot -replace "\\", "/")
+
 ## Custom Aliases
 Set-Alias ff fastfetch
 
 ## Oh-My-Posh Config
-$POSH_CONFIG="SimpleConfig.json"
-$POSH_CONFIG_PATH=($PSScriptRoot -replace "\\", "/"), "PoshConfigs", $POSH_CONFIG -join "/"
-oh-my-posh --config $POSH_CONFIG_PATH init pwsh | Invoke-Expression
+$PoshConfig="SimpleConfig.json"
+$PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
+oh-my-posh --config $PoshConfigPath init pwsh | Invoke-Expression
 
