@@ -1,10 +1,3 @@
-# Simple prompt: Show just the current directory
-# function prompt {
-#     $p = Split-Path -leaf -path (Get-Location)
-#     "$p> "
-# }
-#
-
 ## Custom Aliases
 New-Alias ff fastfetch
 
