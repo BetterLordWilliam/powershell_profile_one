@@ -3,6 +3,7 @@ $PSScriptRootNix=($PSScriptRoot -replace "\\", "/")
 
 ## Custom Aliases
 Set-Alias ff fastfetch
+Set-Alias cvm ConvertFrom-MarkDown
 
 ## Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
