@@ -6,7 +6,7 @@ function nixPath
 }
 function goU { Set-Location ..\ }
 
-## Git functions
+function gitStatus { git status }
 function gitAddAll { git add . }
 function gitCommit
 {
@@ -22,6 +22,7 @@ $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 Set-Alias ff fastfetch
 Set-Alias .. goU
 
+Set-Alias gts gitStatus
 Set-Alias gta gitAddAll
 Set-Alias gtc gitCommit
 Set-Alias gtu gitPush
