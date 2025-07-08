@@ -8,6 +8,12 @@ function goU { Set-Location ..\ }
 
 ## Git functions
 function gitAddAll { git add . }
+function gitCommit
+{
+  param([string]$CMessage)
+  git commit -m $CMessage
+}
+function gitPush { git push }
 
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
@@ -16,7 +22,9 @@ $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 Set-Alias ff fastfetch
 Set-Alias .. goU
 
-Set-Alias ga gitAddAll
+Set-Alias gta gitAddAll
+Set-Alias gtc gitCommit
+Set-Alias gtu gitPush
 
 # Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
