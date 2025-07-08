@@ -14,6 +14,7 @@ function gitCommit
   git commit -m $CMessage
 }
 function gitPush { git push }
+function gitPull { git pull }
 
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
@@ -26,6 +27,7 @@ Set-Alias gts gitStatus
 Set-Alias gta gitAddAll
 Set-Alias gtc gitCommit
 Set-Alias gtu gitPush
+Set-Alias gtp gitPull
 
 # Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
