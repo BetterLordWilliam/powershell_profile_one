@@ -33,5 +33,7 @@ Set-Alias gtp gitPull
 # Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
+
 oh-my-posh --config $PoshConfigPath init pwsh | Invoke-Expression
+ff
 
