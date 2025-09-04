@@ -23,6 +23,20 @@ function gitPush { git push }
 
 function gitPull { git pull }
 
+function catn {
+  param(
+    $InputItem
+  ) 
+  $content = Get-Content $InputItem
+  $output = ""
+  $linen = 0
+  foreach ($line in $content) {
+    $output += "$linen`t$line`n"
+    $linen += 1
+  }
+  return $output
+}
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
