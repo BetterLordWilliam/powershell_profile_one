@@ -52,6 +52,8 @@ Set-Alias gtc gitCommit
 Set-Alias gtu gitPush
 Set-Alias gtp gitPull
 
+Set-Alias -Name sl -Value "C:\Program Files\sl\bin\sl.exe
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
