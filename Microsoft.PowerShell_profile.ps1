@@ -31,7 +31,7 @@ function catn {
   $output = ""
   $linen = 0
   foreach ($line in $content) {
-    $output += "$linen`t$line`n"
+    $output += "`t$linen  $line`n"
     $linen += 1
   }
   return $output
