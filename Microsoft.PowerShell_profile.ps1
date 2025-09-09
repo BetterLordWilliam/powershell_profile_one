@@ -56,6 +56,8 @@ Set-Alias gtc gitCommit
 Set-Alias gtu gitPush
 Set-Alias gtp gitPull
 
+Set-Alias sl Steam -Force
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
