@@ -58,6 +58,8 @@ Set-Alias gtp gitPull
 
 Set-Alias sl Steam -Force
 
+Set-Alias cocker docker
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
