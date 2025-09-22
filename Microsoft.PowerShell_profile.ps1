@@ -64,6 +64,8 @@ Set-Alias sl Steam -Force
 
 Set-Alias refreshenv Reload-Path
 
+Set-Alias cocker docker
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
