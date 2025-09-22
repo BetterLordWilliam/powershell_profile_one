@@ -41,6 +41,10 @@ function Steam {
   Start-Process "C:\Program Files\sl\bin\sl.exe"
 }
 
+function Reload-Path {
+  $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+}
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
@@ -57,6 +61,8 @@ Set-Alias gtu gitPush
 Set-Alias gtp gitPull
 
 Set-Alias sl Steam -Force
+
+Set-Alias refreshenv Reload-Path
 
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
