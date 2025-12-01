@@ -60,8 +60,6 @@ Set-Alias gtc gitCommit
 Set-Alias gtu gitPush
 Set-Alias gtp gitPull
 
-Set-Alias sl Steam -Force
-
 Set-Alias refreshenv Reload-Path
 
 Set-Alias cocker docker
