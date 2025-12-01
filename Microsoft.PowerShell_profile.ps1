@@ -37,10 +37,6 @@ function catn {
   return $output
 }
 
-function Steam {
-  Start-Process "C:\Program Files\sl\bin\sl.exe"
-}
-
 function Reload-Path {
   $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 }
@@ -63,6 +59,8 @@ Set-Alias gtp gitPull
 Set-Alias refreshenv Reload-Path
 
 Set-Alias cocker docker
+
+Set-Alias sl sl.exe -Force
 
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
