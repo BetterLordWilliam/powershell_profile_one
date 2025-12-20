@@ -41,11 +41,18 @@ function Reload-Path {
   $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 }
 
+function Clear-FastFetch {
+  Clear-Host
+  fastfetch.exe
+}
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
 # Custom Aliases
-Set-Alias ff fastfetch
+Set-Alias ff fastfetch.exe
+Set-Alias ffc Clear-FastFetch
+
 Set-Alias cvm ConvertFrom-MarkDown
 Set-Alias .. goU
 Set-Alias ... goU2
