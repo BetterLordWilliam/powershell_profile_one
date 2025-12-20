@@ -68,3 +68,5 @@ $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
 
 oh-my-posh --config $PoshConfigPath init pwsh | Invoke-Expression
 
+ff
+
