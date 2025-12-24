@@ -17,8 +17,9 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "style": "folder"
+          "options": {
+            "style": "folder",
+            "max_depth": 1
           },
           "template": " \uea83 {{ path .Path .Location }} ",
           "foreground": "p:white",
@@ -29,7 +30,19 @@
           "trailing_diamond": ""
         },
         {
-          "properties": {
+          "options": {
+            "fetch_virtual_env": true
+          },
+          "type": "python",
+          "style": "diamond",
+          "leading_diamond": "<transparent,background></>",
+          "trailing_diamond": "",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": "  {{ .Full }} | {{ if .Venv }}{{ .Venv }}{{ end }} "
+        },
+        {
+          "options": {
             "branch_template": "{{ trunc 25 .Branch }}",
             "fetch_status": true,
             "fetch_upstream_icon": true
