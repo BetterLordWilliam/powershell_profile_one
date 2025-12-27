@@ -40,7 +40,7 @@
           "powerline_symbol": "",
           "foreground": "#100e23",
           "background": "#906cff",
-          "template": "  {{ .Full }} {{ if .Venv }}{{ .Venv }}{{ end }} "
+          "template": "  {{ .Full }} "
         },
         {
           "options": {
