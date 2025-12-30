@@ -29,7 +29,7 @@
           "trailing_diamond": ""
         },
         {
-          "options": {
+          "properties": {
             "fetch_virtual_env": true
           },
           "type": "python",
@@ -42,7 +42,7 @@
           "template": "  {{ .Full }} "
         },
         {
-          "options": {
+          "properties": {
             "branch_template": "{{ trunc 25 .Branch }}",
             "fetch_status": true,
             "fetch_upstream_icon": true
