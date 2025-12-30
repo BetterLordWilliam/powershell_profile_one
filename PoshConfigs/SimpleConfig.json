@@ -27,13 +27,7 @@
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": ""
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
+        },
         {
           "options": {
             "fetch_virtual_env": true
