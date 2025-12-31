@@ -46,6 +46,27 @@ function Clear-FastFetch {
   fastfetch.exe
 }
 
+function Get-CodeLineCount {
+  param(
+    [Parameter(Mandatory)]
+    [Alias("E")]
+    [string] $Extension,
+    [Parameter(Mandatory = $false)]
+    [Alias("L")]
+    [string] $Location = $(Get-Location).Path
+  )
+
+  $totalLines = 0
+  $targetItems = Get-ChildItem -Path $Location -Recurse
+  $targetItems | Foreach-Object {
+    if ( ( $_.Extension ) -and ( $_.Extension.Equals($Extension) ) ){
+      $totalLines += ( Get-Content $_.FullName ).Count # Number of lines
+    }
+  }
+
+  return $totalLines;
+}
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
@@ -64,6 +85,7 @@ Set-Alias gtu gitPush
 Set-Alias gtp gitPull
 
 Set-Alias refreshenv Reload-Path
+Set-Alias lines Get-CodeLineCount
 
 Set-Alias cocker docker
 
