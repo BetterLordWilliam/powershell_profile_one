@@ -67,6 +67,23 @@ function Get-CodeLineCount {
   return $totalLines;
 }
 
+function Start-Timer {
+  param(
+    [Parameter(Mandatory)]
+    [Alias("D")]
+    [int]$Duration
+  )
+  Start-ThreadJob -StreamingHost $Host -ScriptBlock {
+    $i = ( $using:Duration )
+    while ($i -ge 0) {
+      Write-Host "$i"
+      Start-Sleep -seconds 1
+      $i--
+    }
+    Write-Host "`a"
+  } | Wait-Job
+}
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
