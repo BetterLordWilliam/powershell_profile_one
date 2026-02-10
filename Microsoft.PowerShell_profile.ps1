@@ -59,7 +59,7 @@ function Get-CodeLineCount {
   $totalLines = 0
   $targetItems = Get-ChildItem -Path $Location -Recurse
   $targetItems | Foreach-Object {
-    if ( ( $_.Extension ) -and ( $_.Extension.Equals($Extension) ) ){
+    if ( ( $_.Extension ) -and ( $_.Extension.Equals($Extension) -and ( $_ -is [System.IO.FileInfo] ) ) ){
       $totalLines += ( Get-Content $_.FullName ).Count # Number of lines
     }
   }
