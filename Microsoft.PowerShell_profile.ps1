@@ -109,6 +109,7 @@ Set-Alias cocker docker
 Set-Alias sl sl.exe -Force
 
 Set-Alias sd Switch-Desktop
+Set-Alias nd New-Desktop
 
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
