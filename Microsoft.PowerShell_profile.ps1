@@ -108,6 +108,8 @@ Set-Alias cocker docker
 
 Set-Alias sl sl.exe -Force
 
+Set-Alias sd Switch-Desktop
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
