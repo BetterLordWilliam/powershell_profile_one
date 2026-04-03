@@ -1,3 +1,5 @@
+. "$PSScriptRoot\Environment.ps1"
+
 # Useful functions
 function nixPath
 {
