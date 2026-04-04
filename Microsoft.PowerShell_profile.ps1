@@ -113,6 +113,9 @@ Set-Alias sl sl.exe -Force
 Set-Alias sd Switch-Desktop
 Set-Alias nd New-Desktop
 
+Set-Alias gt Get-ScheduledTask
+Set-Alias st Set-ScheduledTask
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
