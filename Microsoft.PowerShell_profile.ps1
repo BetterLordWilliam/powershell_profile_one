@@ -116,6 +116,8 @@ Set-Alias nd New-Desktop
 Set-Alias gt Get-ScheduledTask
 Set-Alias st Set-ScheduledTask
 
+Remove-Alias man <# why?? #>
+
 #Oh-My-Posh Config
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
