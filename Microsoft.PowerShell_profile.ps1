@@ -100,7 +100,7 @@ function prompt {
         if ( $pwd -match $reg ) {
                 $path = "~" + ( $pwd -replace $reg, '${trail}')
             }
-        return "`e[32m{0}@{1}`e[0m:`e[32m{2}`e[0m$ " -f `
+        return "`e[32m{0}@{1}`e[0m:`e[33m{2}`e[0m$ " -f `
             $env:USERNAME, `
             $env:USERDOMAIN, `
             $path
