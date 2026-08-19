@@ -86,6 +86,26 @@ function Start-Timer {
   } | Wait-Job
 }
 
+function prompt {
+        <#
+            desired path
+            user@computer:dir-leaf$
+
+            $env:USERNAME
+            $env:USERDOMAIN
+        #>
+        $path   = "$pwd"
+        $uroot  = "C:\\Users\\$($env:USERNAME)"
+        $reg    =  "^$uroot(?<trail>.*?)`$"
+        if ( $pwd -match $reg ) {
+                $path = "~" + ( $pwd -replace $reg, '${trail}')
+            }
+        return "`e[32m{0}@{1}`e[0m:`e[32m{2}`e[0m$ " -f `
+            $env:USERNAME, `
+            $env:USERDOMAIN, `
+            $path
+    }
+
 # Useful profile script variables
 $PSScriptRootNix=(nixPath -Path $PSScriptRoot)
 
@@ -122,5 +142,5 @@ Remove-Alias man <# why?? #>
 $PoshConfig="SimpleConfig.json"
 $PoshConfigPath=($PSScriptRootNix, "PoshConfigs", $PoshConfig -join "/")
 
-oh-my-posh --config $PoshConfigPath init pwsh | Invoke-Expression
+#oh-my-posh --config $PoshConfigPath init pwsh | Invoke-Expression
 
