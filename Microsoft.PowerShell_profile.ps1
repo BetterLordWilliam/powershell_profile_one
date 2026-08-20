@@ -96,11 +96,12 @@ function prompt {
         #>
         $path   = "$pwd"
         $uroot  = "C:\\Users\\$($env:USERNAME)"
-        $reg    =  "^$uroot(?<trail>.*?)`$"
+        $reg    =  "^$uroot(.*)`$"
         if ( $pwd -match $reg ) {
-                $path = "~" + ( $pwd -replace $reg, '${trail}')
+                $path = "~" + ( $pwd -replace $reg, '${1}')
             }
-        return "`e[32m{0}@{1}`e[0m:`e[33m{2}`e[0m$ " -f `
+        # $path = $path | split-path -leaf
+        return "`e[32m{0}@{1}`e[0m:`e[33m{2}`e[0m`n$ " -f `
             $env:USERNAME, `
             $env:USERDOMAIN, `
             $path
