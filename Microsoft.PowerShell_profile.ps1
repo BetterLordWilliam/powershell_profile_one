@@ -100,7 +100,10 @@ function prompt {
         if ( $pwd -match $reg ) {
                 $path = "~" + ( $pwd -replace $reg, '${1}')
             }
-        # $path = $path | split-path -leaf
+        $segs = $path -split '\\'
+        if ( $segs.length -gt 4 ) {
+                $path = $segs[0] + "\...\" + $segs[-1]
+            }
         return "`e[32m{0}@{1}`e[0m:`e[33m{2}`e[0m`n$ " -f `
             $env:USERNAME, `
             $env:USERDOMAIN, `
