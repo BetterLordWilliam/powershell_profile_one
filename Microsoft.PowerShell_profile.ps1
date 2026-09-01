@@ -104,6 +104,11 @@ function prompt {
         if ( $segs.length -gt 4 ) {
                 $path = $segs[0] + "\...\" + $segs[-1]
             }
+
+        $Host.UI.RawUI.WindowTitle = "{0}@{1}:{2}" -f `
+            $env:USERNAME, `
+            $env:USERDOMAIN, `
+            $path
         return "`e[32m{0}@{1}`e[0m:`e[33m{2}`e[0m`n$ " -f `
             $env:USERNAME, `
             $env:USERDOMAIN, `
